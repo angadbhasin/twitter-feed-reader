@@ -84,7 +84,7 @@ class FeedServiceTest extends \PHPUnit_Framework_TestCase
         
         $actual = $this->feedService->getFeedData(array("name"  => "test","count" => 2), 'GET');
         
-        $expected = "Some data";
+        $expected = null;
         
         $this->assertEquals($expected, $actual);
     }
