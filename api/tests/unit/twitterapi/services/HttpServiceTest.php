@@ -68,4 +68,29 @@ class HttpServiceTest extends \PHPUnit_Framework_TestCase
         
         $this->assertEquals($expected, $actual);
     }
+    
+    /**
+     * @test
+     * @covers \TwitterAPI\services\HttpService::makeOAuthData
+     *
+     */
+    public function testMakeOAuthData()
+    {
+        $params = array("name" => "test", "count" => 2);
+    
+        $expected = array(
+            "oauth_consumer_key"    => "api_key",
+            "oauth_nonce"           => time(),  //TODO: find an efficient way to test this method
+            "oauth_signature_method"=> "HMAC-SHA1",
+            "oauth_token"           => "access_token",
+            "oauth_timestamp"       => time(),
+            "oauth_version"         => "1.0",
+            "name"                  => "test",
+            "count"                 => 2
+        );
+    
+        $actual = $this->httpService->makeOAuthData($params);
+    
+        $this->assertEquals($expected, $actual);
+    }
 }
