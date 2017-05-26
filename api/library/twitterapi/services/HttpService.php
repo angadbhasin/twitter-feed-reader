@@ -21,14 +21,6 @@ class HttpService
     private $conf = array();
     
     /**
-     * cURL Request Handle
-     * 
-     * @var resource
-     * 
-     */
-    private $handle = null;
-    
-    /**
      * Returns an Object of this class
      * 
      */
