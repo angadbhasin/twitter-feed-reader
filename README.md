@@ -19,7 +19,7 @@ Application Structure
 
 
 To install the application, you will need composer. Simply run composer install from within the api directory to install application dependencies.  
-All front end dependencies are included for your convenience but you could also install the using Bower. PHP unit tests are included in the api/tests folder.  
+All front end dependencies are included for your convenience but you could also install them using Bower. PHP unit tests are included in the api/tests folder.  
 Unit tests can be executed by using the following command  
   
 ".\vendor\bin\phpunit api/tests/unit"  
