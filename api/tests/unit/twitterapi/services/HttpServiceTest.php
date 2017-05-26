@@ -13,9 +13,9 @@ class HttpServiceTest extends \PHPUnit_Framework_TestCase
     private $httpService;
     
     /**
-     * 
      * (non-PHPdoc)
      * @see PHPUnit_Framework_TestCase::setUp()
+     * 
      */
     public function setUp()
     {
