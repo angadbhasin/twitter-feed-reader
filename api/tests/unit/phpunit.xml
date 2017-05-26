@@ -1,0 +1,40 @@
+<phpunit 
+	bootstrap="bootstrap.php"
+	verbose="true"
+	colors="true"
+>
+    <testsuites>
+        <testsuite name="Unit test suite for twitter feed reader">
+            <directory suffix="Test.php">twitterapi/</directory>
+        </testsuite>
+    </testsuites>
+	<filter>
+		<blacklist>
+			<exclude>
+				<directory suffix=".php">../vendor</directory>
+			</exclude>
+		</blacklist>
+		<whitelist processUncoveredFilesFromWhitelist="true">
+			<directory>../../library/twitterapi/services</directory>
+		</whitelist>
+	</filter>
+    <logging>
+		<log
+			type="coverage-html"
+			target="./log/coverage/report"
+			charset="UTF-8"
+			yui="true"
+			highlight="false"
+			lowUpperBound="35"
+			highLowerBound="70"
+		/>
+		<log
+			type="tap"
+			target="./log/tap.txt"
+		/>
+		<log
+			type="testdox-html"
+			target="./log/testdox.html"
+		/>
+	</logging>
+</phpunit>
