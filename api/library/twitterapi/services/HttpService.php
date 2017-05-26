@@ -23,6 +23,8 @@ class HttpService
     /**
      * Returns an Object of this class
      * 
+     * @param array $conf  Config data
+     * 
      */
     public static function getInstance($conf)
     {
