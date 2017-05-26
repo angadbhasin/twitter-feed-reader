@@ -1,0 +1,13 @@
+{
+    "name": "simple twitter feed reader",
+    "version": "1.0",
+    "authors": [
+        "Angad Bhasin angad-bhasin@hotmail.com"
+    ],
+    "dependencies": {
+        "bootstrap": "latest",
+        "jquery": "latest",
+        "backbone": "latest",
+        "underscore": "latest"   
+    }
+}
