@@ -8,9 +8,10 @@ var Tweets = Backbone.Collection.extend({
 	   $.each( data, function( idx, value ) {
 		   var tweet= {};
 		   var tweetDate = new Date(value.created_at);
-		   
+
 		   //build the model with values we need for displaying data
 		   tweet['profilePicture']	= value.user.profile_image_url;
+		   tweet['media']			= value.entities.media;
 		   tweet['name']			= value.user.name;
 		   tweet['screenName']		= value.user.screen_name;
 		   tweet['comment']			= value.text;
