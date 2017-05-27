@@ -10,10 +10,19 @@
         <span class="pull-right text-muted">@<%= screenName %></span>
         <h4><%= name %></h4>
         <p class="comment"><%= comment %></p>
-        <section>
-          <i class="glyphicon glyphicon-time text-muted"></i><%= date %>
-          <span class="pull-right text-muted glyphicon glyphicon-retweet"> <%= retweetCount %></span>
-        </section>
+      <div class ="media">
+	    <picture>
+	    	<div class="content-img">
+	    	  <% _.each(media, function(img) { %>
+	            <img class ="content-img" src="<%= img.media_url %>"/>
+	          <% }); %>
+	    	</div>
+	    </picture>
+	   </div>
+       <section>
+         <i class="glyphicon glyphicon-time text-muted"></i><%= date %>
+         <span class="pull-right text-muted glyphicon glyphicon-retweet"> <%= retweetCount %></span>
+       </section>
       </div>
     </div>
   </article>
