@@ -7,6 +7,7 @@ composer
 Backbone js  
 Underscore js  
 Jquery  
+bootstrap  
 Bower  
 Slim 3  
 PHP unit  
