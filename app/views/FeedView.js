@@ -15,10 +15,10 @@ var TweetView = Backbone.View.extend({
             }
         });
         
-        // Update the feed every
+        // Update the feed every minute
         setInterval(function() {
         	that.updateFeed();
-        }, 5000000000);
+        }, 60000);
     },
 
     updateFeed:function() {
