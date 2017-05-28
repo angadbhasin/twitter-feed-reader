@@ -1,6 +1,6 @@
 var Tweet = Backbone.View.extend({
 
-	tagName:"div",
+    tagName:"div",
     className:"tweet-container",
     template:$("#tweetTemplate").html(),
 
