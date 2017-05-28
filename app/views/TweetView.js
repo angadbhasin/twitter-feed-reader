@@ -1,14 +1,13 @@
 var Tweet = Backbone.View.extend({
-		
+
+	tagName:"div",
+    className:"tweet-container",
+    template:$("#tweetTemplate").html(),
+
     render:function () {
-    	var that=this;
-    	
-    	$.get('app/templates/TweetTemplate.html', function (data) {
-    		template = _.template(data, {  });
-            that.$el.html(template(that.model.toJSON())); 
-            
-        }, 'html');
-    	
-    	return this;
+        var template = _.template(this.template);
+
+        this.$el.html(template(this.model.toJSON()));
+        return this;
     }
 });

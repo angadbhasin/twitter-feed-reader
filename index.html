@@ -33,7 +33,38 @@
         
         <!-- Tweets -->
         <div id="tweets">
-            <!-- This is where the tweets will render --> 
+        	<div class="tweet-container">
+			<script id="tweetTemplate" type="text/template">
+            	<!-- This is where the tweets will render -->
+            	<article>
+				    <div class="row">
+				      <div class="col-sm-3">
+				        <figure>
+				          <img src="<%= profilePicture %>">
+				        </figure>
+				      </div>
+				      <div class="col-md-8">
+				        <span class="pull-right text-muted">@<%= screenName %></span>
+				        <h4><%= name %></h4>
+				        <p class="comment"><%= comment %></p>
+				      <div class ="media">
+					    <picture>
+					    	<div class="content-img">
+					    	  <% _.each(media, function(img) { %>
+					            <img class ="content-img" src="<%= img.media_url %>"/>
+					          <% }); %>
+					    	</div>
+					    </picture>
+					   </div>
+				       <section>
+				         <i class="glyphicon glyphicon-time text-muted"></i><%= date %>
+				         <span class="pull-right text-muted glyphicon glyphicon-retweet"> <%= retweetCount %></span>
+				       </section>
+				      </div>
+				    </div>
+				  </article>
+			</script>
+            </div>
         </div>
         <!-- End Tweets -->
         
