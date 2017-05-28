@@ -54,7 +54,7 @@ body {
   }
 }
 
-article{
+article {
     background-color: #ffffff;
 	border: 1px solid #aaa;
     padding: 10px;
@@ -62,7 +62,7 @@ article{
     margin-top: 10px;
 }
 
-figure img{
+figure img {
     width: 65%;
     height: 65%;
 	border-radius:10px;
@@ -70,11 +70,11 @@ figure img{
 }
 
 .glyphicon-retweet,
-.glyphicon-time{
+.glyphicon-time {
     padding: 2px;
 }
 
-.media{
+.media {
 	width:90%
 }
 
